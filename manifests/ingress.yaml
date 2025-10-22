@@ -5,12 +5,12 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: addon-http-application-routing  
 spec:
+  ingressClassName: nginx
   rules:
-  - host: add-task.devopsinsiders.online
-    http:
+  - http:
       paths:
       - pathType: Prefix
-        path: "/"
+        path: "/add-task($|/.*|)"
         backend:
           service:
             name: add-task
