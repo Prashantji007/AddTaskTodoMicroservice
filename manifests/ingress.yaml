@@ -8,7 +8,7 @@ spec:
   rules:
   - http:
       paths:
-      - pathType: Prefix
+      - pathType: ImplementationSpecific
         path: "/add-task($|/.*|)"
         backend:
           service:
